@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Upload Movie - MovieHub</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+  <link rel="stylesheet" href="assets/css/utilities.css">
+  <style>
+    .admin-container {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 2rem;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    }
+    .form-group {
+      margin-bottom: 1.5rem;
+    }
+    .image-preview {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <a href="index.html" class="logo"><i class="fas fa-film"></i> MovieHub</a>
+      <div class="back-btn">
+        <a href="index.html"><i class="fas fa-arrow-left"></i> Back to Home</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <div id="loginSection" class="admin-container">
+      <h2><i class="fas fa-lock"></i> Admin Login</h2>
+      <p>Enter your GitHub access token to continue</p>
+      <div class="form-group">
+        <input type="password" id="githubToken" class="form-control" placeholder="GitHub Access Token">
+      </div>
+      <button onclick="login()" class="btn btn-primary">Login</button>
+    </div>
+
+    <div id="uploadSection" class="admin-container hidden">
+      <h2><i class="fas fa-plus-circle"></i> Add New Movie</h2>
+      <form id="movieUploadForm">
+        <div class="form-group">
+          <label>Movie Title</label>
+          <input type="text" id="movieTitle" class="form-control" required>
+        </div>
+        <div class="form-group">
+          <label>Release Year</label>
+          <input type="number" id="movieYear" class="form-control" required>
+        </div>
+        <div class="form-group">
+          <label>Genre (comma separated)</label>
+          <input type="text" id="movieGenre" class="form-control" required>
+        </div>
+        <div class="form-group">
+          <label>IMDB Rating</label>
+          <input type="number" step="0.1" id="movieRating" class="form-control" required>
+        </div>
+        <div class="form-group">
+          <label>Poster Image URL</label>
+          <input type="url" id="moviePoster" class="form-control" required>
+          <img id="posterPreview" class="image-preview">
+        </div>
+        <div class="form-group">
+          <label>Banner Image URL</label>
+          <input type="url" id="movieBanner" class="form-control" required>
+          <img id="bannerPreview" class="image-preview">
+        </div>
+        <div class="form-group">
+          <label>Description</label>
+          <textarea id="movieDescription" class="form-control" required></textarea>
+        </div>
+        <div class="form-group">
+          <label>Screenshot URLs (one per line)</label>
+          <textarea id="movieScreenshots" class="form-control"></textarea>
+        </div>
+        <div class="form-group">
+          <label>Google Drive Download Link</label>
+          <input type="url" id="downloadLink" class="form-control" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Add Movie</button>
+      </form>
+    </div>
+  </main>
+
+  <script src="assets/js/auth.js"></script>
+  <script src="assets/js/script.js"></script>
+</body>
+</html>

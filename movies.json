@@ -1,0 +1,19 @@
+{
+  "movies": [
+    {
+      "id": 1,
+      "title": "Inception",
+      "year": 2010,
+      "genre": "Sci-Fi, Action",
+      "rating": 8.8,
+      "poster": "assets/images/posters/inception.jpg",
+      "banner": "assets/images/banners/inception-banner.jpg",
+      "description": "A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O.",
+      "screenshots": [
+        "assets/images/screenshots/inception-1.jpg",
+        "assets/images/screenshots/inception-2.jpg"
+      ],
+      "downloadLink": "https://drive.google.com/uc?export=download&id=FILE_ID"
+    }
+  ]
+}

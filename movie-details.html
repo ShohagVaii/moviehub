@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movie Details - MovieHub</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/css/lightgallery.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+  <link rel="stylesheet" href="assets/css/utilities.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <a href="index.html" class="logo"><i class="fas fa-film"></i> MovieHub</a>
+      <div class="back-btn">
+        <a href="index.html"><i class="fas fa-arrow-left"></i> Back to Movies</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="movie-details" id="movieDetails">
+      <div class="loading-spinner" style="text-align: center; padding: 3rem;">
+        <div class="spinner"></div>
+        <p>Loading movie details...</p>
+      </div>
+    </div>
+
+    <div class="similar-movies" id="similarMovies"></div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2023 MovieHub. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/js/lightgallery.min.js"></script>
+  <script src="assets/js/auth.js"></script>
+  <script src="assets/js/analytics.js"></script>
+  <script src="assets/js/script.js"></script>
+</body>
+</html>
