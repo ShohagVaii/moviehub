@@ -1,0 +1,17 @@
+/* Tablets */
+@media (max-width: 768px) {
+  .movie-grid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .container {
+    width: 95%;
+  }
+  
+  .logo {
+    font-size: 1.2rem;
+  }
+}
